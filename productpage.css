@@ -1,0 +1,343 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap')
+	;
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	font-family: '나눔스퀘어라운드-bold';
+	font-weight: bold;
+}
+
+body {
+	position: relative;
+	font-family: "Poppins", sans-serif;
+	color: #444444;
+	margin: 0px;
+}
+
+hr {
+	/* box-shadow: gray 1px 1px 1px 1px; */
+	
+}
+
+a, a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	width: 100%;
+	height: auto;
+}
+
+.container1 {
+	margin: auto;
+	padding-top: 10px;
+	width: 60%;
+	max-width: 1410px;
+}
+
+.container2 {
+	margin: auto;
+	padding-top: 10px;
+	width: 60%;
+	min-width: 1150px;
+}
+
+/* Nav */
+.main-nav {
+	display: flex;
+	justify-content: space-between;
+	height: 60px;
+	font-size: 20px;
+}
+
+.main-nav .logo {
+	margin-top: 5px;
+	width: 115px;
+	height: 35px
+}
+
+.main-nav ul {
+	margin-left: 10px;
+	display: flex;
+}
+
+.main-nav ul li {
+	margin-top: -8;
+	padding: 0 5px;
+}
+
+.main-nav ul li a {
+	padding-bottom: 2px;
+}
+
+.main-nav ul li a:hover {
+	border-bottom: 2px solid #262626;
+}
+
+.main-nav ul.main-menu {
+	flex: 1;
+	/* margin-left: 20px; */
+}
+
+/* 색션 영역 */
+.section-products {
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.section-products .header {
+	width: 100%;
+	margin-top: -40px;
+	justify-content: center;
+	/* margin-bottom: 20px; */
+	padding: 1px 0;
+	/* background-color: rgb(245, 243, 228); */
+	/* border: #262626 2px solid; */
+}
+
+.header_category {
+	width: auto;
+	height: auto;
+}
+
+.header_category h2 {
+	margin: 0;
+	padding: 0;
+	padding-bottom: -10px;
+	height: 10px;
+}
+
+.header h2, h3 {
+	text-align: center;
+}
+
+.section-products .header h3 {
+	font-size: 2.2rem;
+	color: rgb(209, 130, 26);
+	font-weight: 600;
+}
+
+.section-products .header h2 {
+	display: inline-block;
+	margin-bottom: 20px;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #444444;
+}
+
+.section-products .single-product {
+	width: 260px;
+	height: 400px;
+	margin-top: 20px;
+	margin-bottom: 26px;
+	box-shadow: gray 0px 0px 5px 1px;
+	align-items: flex-start;
+}
+
+.test {
+	text-align: center;
+}
+
+.section-products .single-product .part-1 {
+	position: relative;
+	height: 290px;
+	max-height: 290px;
+	margin-bottom: 0px;
+	overflow: hidden;
+}
+
+.section-products .single-product .part-1::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.section-products .single-product:hover .part-1{
+	transform: scale(1.2, 1.2) rotate(5deg);
+}
+/* .section-products .single-product:hover .part-1::before {
+	transform: scale(1.2, 1.2) rotate(5deg);
+} */
+
+/* .section-products #product-img .part-1::before{
+	background: url("img/dethofdeth.png") no-repeat center;
+	background-size: cover;
+	transition: all 0.3s;
+} */
+
+/* .section-products #product-1 .part-1::before {
+	background: url("img/dethofdeth.png") no-repeat center;
+	background-size: cover;
+	transition: all 0.3s;
+}
+ */
+.section-products #product-2 .part-1::before {
+	background: url("img/iiphon24.png") no-repeat center;
+	background-size: cover;
+	
+}
+
+.section-products #product-3 .part-1::before {
+	background: url("img/kingsword.png") no-repeat center;
+	background-size: cover;
+}
+
+.section-products #product-4 .part-1::before {
+	background: url("img/plunger.png") no-repeat center;
+	background-size: cover;
+}
+
+.section-products #product-5 .part-1::before {
+	background: url("img/ReinforcedWoodenStick.png") no-repeat center;
+	background-size: cover;
+}
+
+.section-products #product-6 .part-1::before {
+	background: url("img/rinnegan.png") no-repeat center;
+	background-size: cover;
+}
+
+.section-products #product-7 .part-1::before {
+	background: url("img/vacuum .png") no-repeat center;
+	background-size: cover;
+}
+
+.section-products #product-8 .part-1::before {
+	background: url("img/headset.png") no-repeat center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* 할인 가격표 */
+.section-products .single-product .part-1 .discount, .section-products .single-product .part-1 .new
+	{
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	color: #ffffff;
+	background-color: #fe302f;
+	padding: 1px 8px 3px 8px;
+	text-transform: uppercase;
+	font-size: 0.85rem;
+}
+
+/* 해외직구 */
+.section-products .single-product .part-1 .crossbordershopping {
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	color: black;
+	background-color: rgb(247, 255, 173);
+	padding: 1px 8px 4px 8px;
+	text-transform: uppercase;
+	font-size: 0.85rem;
+}
+
+.section-products .single-product .part-1 .new {
+	left: 0;
+	background-color: #444444;
+}
+
+.section-products .single-product .part-1 ul {
+	position: absolute;
+	bottom: -41px;
+	left: 20px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	opacity: 0;
+	transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+	bottom: 30px;
+	opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+	display: inline-block;
+	margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+	display: inline-block;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #ffffff;
+	color: #444444;
+	text-align: center;
+	box-shadow: 0 2px 20px rgb(50 50 50/ 10%);
+	transition: color 0.2s;
+}
+
+.part-1 .fa-shopping-cart {
+	position: absolute;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	background-size: cover;
+	background-image:
+		url('data:image/png;base64,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');
+	/* background-image: url('https://w7.pngwing.com/pngs/932/532/png-transparent-emoji-supermarket-grocery-store-shopping-cart-shopping-bags-trolleys-emoji-angle-food-shopping-bags-trolleys.png'); */
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+	color: #fe302f;
+}
+
+.section-products .single-product .part-2 .product-title {
+	font-size: 20px;
+	margin-top: 5px;
+}
+
+.section-products .single-product .part-2 h4 {
+	display: inline-block;
+	margin-top: -16px;
+	font-size: 1.2rem;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+	position: relative;
+	padding: 0 7px;
+	margin-right: 2px;
+	opacity: 0.6;
+}
+
+/* 가격표 이전 가격 (product-lod-price) */
+.section-products .single-product .part-2 .product-old-price::after {
+	position: absolute;
+	content: "";
+	top: 57%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #444444;
+	transform: translateY(-50%);
+}
+
+.row {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	height: auto;
+	margin: auto;
+/* 	display: grid;
+	grid-template-columns: 2fr 2fr 2fr 2fr */
+}

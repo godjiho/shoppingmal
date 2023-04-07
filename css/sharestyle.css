@@ -1,0 +1,418 @@
+@charset "UTF-8";
+/* 가져온거 nav {} */
+/*hamburger menu*/
+body { background: #F5F7FA;}
+
+body.open, body:after {
+	overflow: hidden
+}
+.b-nav, body:after {
+	position: absolute;
+	right: 0;
+}
+.b-brand, .b-link {
+	font-size: 18px;
+	font-weight: 700;
+	margin-left: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	;
+}
+@-webkit-keyframes slideInLeft {
+	0% {
+	-webkit-transform: translate3d(345px, 0, 0);
+	transform: translate3d(345px, 0, 0);
+	visibility: visible;
+	}
+	100% {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	visibility: visible;
+	}
+}
+@keyframes slideInLeft {
+	0% {
+	-webkit-transform: translate3d(345px, 0, 0);
+	transform: translate3d(345px, 0, 0);
+	visibility: visible;
+	}
+	100% {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	visibility: visible;
+	}
+}
+
+body:after {
+	background: #000;
+	content: '';
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	padding: 0;
+	top: 0;
+	visibility: hidden;
+	-webkit-transition: all .6s ease;
+	transition: all .6s ease;
+	width: 100%;
+}
+body.open:after {
+	z-index: 10;
+	opacity: 1;
+	height: 100000%;
+	visibility: visible
+}
+/* .mobile-nav {} */
+
+.mobile-nav{
+	border: 3px red solid;
+}
+
+.login_name{
+	border: 3px blue solid;
+	position:relative;
+	float:right;
+}
+.b-nav {
+	background: #000 none repeat scroll 0 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 12;
+	padding: 1.5rem 0 ;
+	border: black 3px solid;
+}
+.b-nav:not(.open) {
+	animation-duration: 0.4s;
+	animation-fill-mode: both;
+	-webkit-animation-name: slideOutLeft;
+	animation-name: slideOutLeft
+}
+.b-nav {
+	animation-duration: .4s;
+	animation-fill-mode: both;
+	-webkit-animation-name: slideInLeft;
+	animation-name: slideInLeft
+}
+.b-nav ul {
+	padding-left: 0px;
+}
+
+.inlinenav {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.inlinenav li {
+margin: 0 5rem;
+
+}
+
+.inlinenav li a{
+padding: 1rem 0;
+color: #fff;
+}
+/* .inlinenav li a:hover{
+none;
+} */
+
+
+.hamnavsolid {
+	width: 100%;
+	height: 1px;
+	filter: invert(1);
+	margin-bottom: 3rem;
+}
+.b-nav li {
+	color: #fff;
+	list-style-type: none;
+	padding: 10px 10px 10px 0;
+	text-align: center;
+
+}
+.b-nav li:not(.open) {
+	animation-duration: 0.4s;
+	animation-fill-mode: both;
+
+}
+.b-nav li:not(.open), .b-nav.open li {
+	-webkit-animation-duration: 0.4s;
+	-webkit-animation-fill-mode: both
+}
+.b-nav li:first-child {
+	margin-top: 0px
+}
+.b-nav.open {
+	visibility: visible;
+	animation-duration: 0.4s;
+	animation-fill-mode: both;
+
+}
+.b-nav:not(.open) {
+	visibility: hidden;
+	animation-duration: 0.4s;
+	animation-fill-mode: backwards;
+	-webkit-animation-name: slideOutLeft;
+	animation-name: slideOutLeft
+}
+.b-nav.open li {
+	animation-duration: 0.2s;
+	animation-fill-mode: both;
+	-webkit-animation-name: slideInLeft;
+	animation-name: slideInLeft
+}
+.b-link {
+	background: 0 0;
+	border-left: rgba(255, 255, 255, 0) solid 2px;
+	color: #fff;
+	width: auto;
+}
+
+.hamnavbig li a{
+	font-size: 1.6rem;
+	line-height: 4rem;
+
+}
+/* .b-link, .b-menu {
+
+}
+.b-nav li {
+
+} */
+
+/*.b-link--active,
+.b-link:hover {
+	border-left: #e00a12 solid 5px;
+	padding-left: 30px
+}*/
+
+.b-menu {
+	cursor: pointer;
+	display: block;
+	height: 66px;
+	padding-top: 20px;
+	position: relative;
+	top: -20px;
+	transition: all 0.4s ease 0s;
+	width: 43px;
+	z-index: 12;
+	right: 10px;
+}
+.b-bun--bottom, .b-bun--mid, .b-bun--top {
+	height: 2px;
+	width: 25px
+}
+
+/* .b-menu {
+} */
+/* .b-container.open .b-main, .b-menu:hover {} */
+.b-bun {
+	background: #444;
+	transition: all .4s ease;
+
+}
+.b-brand, .b-bun {
+	position: relative;
+	-webkit-transition: all .4s ease
+}
+.b-bun--top {
+	top: 0
+}
+.b-bun--mid {
+	top: 8px
+}
+.b-bun--bottom {
+	top: 16px
+}
+.b-brand {
+	color: #fff;
+	top: -21.43px;
+	transition: all .4s ease;
+	z-index: 13
+}
+.b-container {
+	position: absolute;
+	right: 0;
+	top: 20px;
+}
+.b-container:hover:not(.open) .bun-bottom, .b-container:hover:not(.open) .bun-mid, .b-container:hover:not(.open) .bun-top {
+	background: #444;
+}
+.b-container.open .b-bun--top {
+	background: #fff;
+	top: 9px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg)
+}
+.b-container.open .b-bun--mid {
+	opacity: 0
+}
+.b-container.open .b-bun--bottom {
+	background: #fff;
+	top: 5px;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg)
+}
+.b-container.open .b-brand {
+	color: #fff
+}
+
+
+/* from 4번 헤더 */
+
+
+/* 헤드 영역 전체 박스크기 */
+header > div {
+	width: 100%;
+	height: 90px;
+	display: flex;
+	justify-content: space-around;
+	justify-content: center;
+}
+
+header>div .header-box {
+	position: relative;
+	height: 90px;
+	min-width: 1150px;
+}
+
+.headerlogowidth {
+	width: 10%;
+	height: 35.17px;
+	float: left;
+
+}
+.headerlogo{
+	margin-top: 20px;
+	width: 130px;
+	filter: grayscale(1), opacity(0.4);
+}
+.anav a:before {
+	z-index: 10;
+	content: '';
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	bottom: 15px;
+	left: calc(-101%);
+	background: rgba(245, 205, 211, 0.542);
+	transition: 0.3s ease-in-out;
+}
+
+.anav a:hover:before {
+	left: 0;
+	color: #fff;
+	border-bottom: none;
+	cursor: pointer;
+}
+
+.inlinenav a:before {
+	content: '';
+	width: 100%;
+	height: 4px;
+	position: absolute;
+	bottom: 25px;
+	left: calc(-101%);
+	background: #fff;
+	transition: 0.3s ease-in-out;
+}
+
+/* .headerlogin {
+} */
+
+.inlinenav a:hover:before {
+	left: 0;
+	color: #fff;
+	border-bottom: none;
+	cursor: pointer;
+}
+
+
+.hamnavbig a{
+	color: #fff;
+}
+.hamnavbig a:before {
+	content: '';
+	width: 100%;    
+	height: 4px;
+	position: absolute;
+	bottom: 7px;
+	left: calc(-101%);
+	background: #fff;
+	transition: 0.3s ease-in-out;
+}
+
+.hamnavbig a:hover:before {
+	left: 0;
+	color: #fff;
+	border-bottom: none;
+	cursor: pointer;
+}
+
+
+header a:hover {
+	left: 0;
+	color: none;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.headerform {
+	position: absolute;
+	right: 0px;
+	width: auto;
+	margin-top: 31px;
+	height: auto;
+	float: right;
+}
+
+.headerform input {
+	font-size: 15px;
+	padding: 4px 10px;
+	border: 1px solid #aaa;
+	margin-top: -10px;
+	margin-right: 2rem;
+	margin-left: 50px;
+	background: none;
+}
+.inputicon {
+	position: absolute;
+	margin-top:3px;
+	right: 0;
+	transform: translate(-170%, 0%);
+	width: 15px;
+	filter: invert(0.3);
+}
+.anav {
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 600px;
+	float: left;
+}
+
+header a {
+	z-index: 20;
+	font-size: 1.2rem;	
+	margin: 0 10px;
+	line-height: 3.7rem;
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	letter-spacing: 1.8px;
+	color: black ;
+	overflow: hidden;
+	text-transform: uppercase;
+}
+header{
+	z-index: 999;
+	width: 100%;
+	height: auto;
+	min-width: 1350px;
+	position: relative;
+	background-color:none;
+	margin: 0 auto;
+	font-weight: bold;
+}

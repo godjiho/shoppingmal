@@ -1,0 +1,114 @@
+@charset "EUC-KR";
+
+
+        .fontsize20{
+            font-size: 20px; font-weight: bolder;
+        }
+
+ 
+		* {font-family: '³ª´®½ºÄù¾î¶ó¿îµå-bold';
+		  box-sizing: border-box;
+		  margin: 0;
+		  padding: 0;
+		}
+		body {
+		  font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+		  background: #fff;
+		  color: #000;
+		  font-size: 15px;
+		  line-height: 1.5;
+		  overflow-x: hidden;
+		}
+		
+		a {
+		  color: #262626;
+		  text-decoration: none;
+		}
+		
+		ul {
+		  list-style: none;
+		}
+		
+		.container {
+		  width: 90%;
+		  max-width: 1100px;
+		  margin: auto;
+		}
+        .head_container {
+          width: 90%;
+		  max-width: 1100px;
+		  margin: auto;
+          margin-bottom: 30px;
+        }
+		
+		
+		
+		/* Showcase */
+        /* .case_showcase{
+            width: 100%;
+            height: auto;
+        } */
+        
+		.showcase {
+		  width: 1920px;
+		  height: auto;
+		  align-items: center;
+		  text-align: center;
+		  justify-content: flex-end;
+		  padding-bottom: 50px;
+		  margin-bottom: 20px;
+		}
+
+        .showcase :hover {cursor: pointer;}
+
+        .showcase img{
+            position: relative;
+            size: cover;
+        }
+		
+		.showcase h2, .showcase p {
+		  margin-bottom: 10px;
+		}
+		
+		.showcase .btn {
+		  margin-top: 20px;
+		}
+		
+		/* Home cards */
+		.home-cards {
+		  display: grid;
+		  grid-template-columns: repeat(4, 1fr);
+		  grid-gap: 20px;
+		  margin-bottom: 40px;
+		}
+		
+		.home-cards img {
+		  width: 100%;
+		  margin-bottom: 20px;
+		}
+		
+		.home-cards h3 {
+		  margin-bottom: 5px;
+		}
+		
+		.home-cards a {
+		  display: inline-block;
+		  padding-top: 10px;
+		  color: #0067b8;
+		  text-transform: uppercase;
+		  font-weight: bold;
+		}
+		
+		.home-cards a:hover i {
+		  margin-left: 10px;
+		}
+		
+		body {
+			/* display: grid; */
+			/* grid-template-rows: 1fr 10rem auto; */
+			/* grid-template-areas: "main" "." "footer"; */
+			min-height: 100vh;
+
+		}
+
+    	
