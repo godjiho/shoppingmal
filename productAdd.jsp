@@ -7,7 +7,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="./css/sharestyle.css">
 <link rel="stylesheet" href="productAdd.css">
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>

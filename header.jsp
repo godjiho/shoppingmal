@@ -5,8 +5,53 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-<link rel="stylesheet" href="./css/sharestyle.css">
+<link rel="stylesheet" href="header.css">
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+	<script>	
+        $(document).ready(function(){
+			$('.showcase').slick({
+				  slide: 'div',
+			      infinite : true,     // 무한 반복 옵션     
+			      slidesToShow : 1,    // 한 화면에 보여질 컨텐츠 개수
+			      slidesToScroll : 1,  // 스크롤 한번에 움직일 컨텐츠 개수
+			      speed : 500,         // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+			      arrows : true,       // 옆으로 이동하는 화살표 표시 여부
+			      autoplay : true,     // 자동 스크롤 사용 여부
+			      autoplaySpeed : 10000,// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+			      pauseOnHover : true, // 슬라이드 이동 시 마우스 호버하면 슬라이더 멈추게 설정
+			      vertical : false,    // 세로 방향 슬라이드 옵션
+			      prevArrow : "<button type='button' class='slick-prev'>Previous</button>",
+			      nextArrow : "<button type='button' class='slick-next'>Next</button>",
+			      draggable : true,    //드래그 가능 여부 
+			      responsive: [ 	   // 반응형 웹 구현 옵션
+			        {  
+			          breakpoint: 960, //화면 사이즈 960px
+			          settings: {
+			          slidesToShow: 4
+			          } 
+			        },{
+			          breakpoint: 768, //화면 사이즈 768px
+			          settings: {    
+			          slidesToShow: 5
+			          }
+			        }
+			      ]
+			    });
+			})
+	</script>
+	<style>
+		.showcase{position: relative;}
+    	.showcase button{position: absolute; top:50%; z-index: 10; transform: translateY(-50%);
+    		width: 71px; height: 71px; border-radius: 100%; background: rgba(255,255,255,0.5); border: 0px;}
+    	.showcase button:before{font-family: "xeicon"; font-size: 45px;}
+    	.showcase button.slick-prev{left: 50px; font-size: 0px; color: transeparent;}
+    	.showcase button.slick-prev:before{content: "\e906"; font-family: "xeicon";}
+    	.showcase button.slick-next{right: 50px; font-size: 0px; color: transeparent;}
+    	.showcase button.slick-next:before{content: "\e907"; font-family: "xeicon";}
+	</style>
 
 <%
 	String user_code= null;
@@ -58,7 +103,7 @@
 				</section>
 			</div>
 			<div class="mobile-nav">
-			<div class="login_name">님 반갑습니다</div>
+			<!-- <div class="login_name">님 반갑습니다</div> -->
 				<div class="b-nav">
 					<ul class="inlinenav">
 						<li><a class="b-link b-link--active" href="#">JOIN</a></li>
